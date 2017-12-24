@@ -1,0 +1,64 @@
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>GETTING STARTED WITH BRACKETS</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="wikiS.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script>
+            
+                $('document').ready(function() {
+alert("123");
+  $('#search').on('click', function() {
+
+    var text = $('#searchTerm').val();
+
+    var url = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + text + '&format=json&callback=?';
+    $.getJSON(url, function(wiki) {
+      console.log(wiki);
+
+      $("#output").empty();
+
+      for (var i = 0; i < wiki[1].length; i++) {
+        $("#output").append("<h2>" + wiki[1][i] + "</h2>" + "<p>" + wiki[2][i] + "</p>" + "<a href=" + wiki[3][i] + " target=_blank>Wikipedia Link</a>")
+      }
+
+    });
+  });
+});
+function colorCH(){
+  document.getElementById("a1").style.backgroundColor=b[Math.floor(Math.random() * 18)];
+}
+var b= [ '#16a085', '#27ae60', '#2c3e50', '#f39c12', '#e74c3c', '#9b59b6', '#FB6964', '#342224', "#472E32", "#BDBB99", "#77B1A9", "#73A857","#eedd99"];
+</script>
+    </head>
+    <body>
+        <div class="container">
+  <h1>Wikipedia ViewerFCC</h1>
+  
+  <h3>
+      <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"> 
+          <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/135px-Wikipedia-logo-v2-en.svg.png" alt="Wikipedia Logo">
+      </a>
+            </h3>
+   
+    <input class="form-control" id="searchTerm" placeholder="Search for a Wikipedia Article" />
+            <br>
+  <div class="text-center">
+    <button onclick="colorCH()" id="search"  type="button" class="btn btn-default" >Search</button>
+      <button onclick="colorCH()"   type="button" class="btn btn-default" >
+          <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">random</a>
+      </button>
+
+    <div id= "output"></div>
+  
+  </div>
+        </div>
+          
+  
+    </body>
+</html>

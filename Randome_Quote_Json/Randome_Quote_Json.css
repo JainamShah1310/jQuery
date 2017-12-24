@@ -1,0 +1,14 @@
+    
+    body 
+        {background-color: #eedd99;}
+
+p#quoteText {
+  font-size: 200%;
+  font-family: 'Droid Serif', Georgia, serif;
+  border: 2px solid #ddbb66;
+  border-radius: 10px;
+  padding: 40px;
+  background-color: white;
+    
+  
+}
