@@ -6,4 +6,4 @@ For Live click below
 4) [calculator](https://codepen.io/jainamshah/pen/xpGLow)
 5) wikipedia search using [JSON](https://codepen.io/jainamshah/pen/QajbNZ)
 6) Pixel Art [Maker](https://codepen.io/jainamshah/pen/mxByKa)
-7)Tic Tac [Toi](https://codepen.io/jainamshah/pen/RMgZov)
+7) Tic Tac [Toi](https://codepen.io/jainamshah/pen/RMgZov)
